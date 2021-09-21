@@ -7,8 +7,10 @@ public class ItemCollect : NetworkBehaviour
 {
     private Dictionary<Item.VegetableType, int> ItemInventory = new Dictionary<Item.VegetableType, int>();
 
-    public delegate void CollectionItem(Item.VegetableType item);
-    public static event CollectionItem ItemCollected;
+    public delegate void CollectItem(Item.VegetableType item);
+    public static event CollectItem ItemCollected;
+
+    Collider itemCollider = null;
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +24,39 @@ public class ItemCollect : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(itemCollider && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Space bar and item collected");
+            Item item = itemCollider.gameObject.GetComponent<Item>();
+            AddToInventory(item);
+            ItemCollected?.Invoke(item.typeOfVeggie);
+            PrintInventory();
+        }
     }
 
-    private void onTriggerStay(Collider other)
+    private void onTriggerEnter(Collider other)
     {
         if (!isLocalPlayer)
         {
             return;
         }
 
-        if (other.CompareTag("Item") && Input.GetKeyDown(KeyCode.Space))
+        if (other.CompareTag("Item"))
         {
-            Item item = other.gameObject.GetComponent<Item>();
-            AddToInventory(item);
-            ItemCollected.Invoke(item.typeOfVeggie);
-            PrintInventory();
+            itemCollider = other;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        if (other.CompareTag("Item"))
+        {
+            itemCollider = null;
         }
     }
 

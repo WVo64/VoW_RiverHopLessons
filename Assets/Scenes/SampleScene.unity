@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 587215769}
   - component: {fileID: 587215771}
   - component: {fileID: 587215770}
+  - component: {fileID: 587215772}
   m_Layer: 5
   m_Name: Beet Count
   m_TagString: Untagged
@@ -570,6 +571,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587215768}
   m_CullTransparentMesh: 1
+--- !u!114 &587215772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587215768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4096acb32abf84947883758f53dc028d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Beet
 --- !u!1 &593081868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1752,7 @@ GameObject:
   - component: {fileID: 1467845143}
   - component: {fileID: 1467845145}
   - component: {fileID: 1467845144}
+  - component: {fileID: 1467845146}
   m_Layer: 5
   m_Name: Carrot Count
   m_TagString: Untagged
@@ -1861,6 +1876,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467845142}
   m_CullTransparentMesh: 1
+--- !u!114 &1467845146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467845142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4096acb32abf84947883758f53dc028d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Carrot
 --- !u!1 &1585310049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +1900,7 @@ GameObject:
   - component: {fileID: 1585310050}
   - component: {fileID: 1585310052}
   - component: {fileID: 1585310051}
+  - component: {fileID: 1585310053}
   m_Layer: 5
   m_Name: Radish Count
   m_TagString: Untagged
@@ -1995,6 +2024,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585310049}
   m_CullTransparentMesh: 1
+--- !u!114 &1585310053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585310049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4096acb32abf84947883758f53dc028d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Radish
 --- !u!1 &1740903925
 GameObject:
   m_ObjectHideFlags: 0
