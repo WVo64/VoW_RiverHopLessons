@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6892230375091288475, guid: c141428f022b3974fa5ff6744863efa3, type: 3}
       propertyPath: m_ServerOnly
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6892230375091288475, guid: c141428f022b3974fa5ff6744863efa3, type: 3}
       propertyPath: m_AssetId.i10
