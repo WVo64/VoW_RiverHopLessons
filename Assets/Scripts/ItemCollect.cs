@@ -34,7 +34,7 @@ public class ItemCollect : NetworkBehaviour
         }
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (!isLocalPlayer)
         {

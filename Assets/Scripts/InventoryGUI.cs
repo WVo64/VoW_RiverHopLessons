@@ -20,5 +20,6 @@ public class InventoryGUI : MonoBehaviour
     void IncrementItem(Item.VegetableType itemType)
     {
         CountGUI cg = items[(int)itemType].GetComponent<CountGUI>();
+        cg.UpdateCount();
     }
 }
